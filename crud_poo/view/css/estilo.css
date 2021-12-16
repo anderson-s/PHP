@@ -1,0 +1,32 @@
+body {
+  font-family: arial, sans-serif;
+}
+table .Dados{
+  border-collapse: collapse;
+  width: 50em;
+  border: 1px solid #666;
+}
+thead {
+  background: #ccc;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid black;
+}
+
+tr .td_table:nth-child(even) {
+    background-color: #edf5ff;
+}
+.tr_table th  {
+  font-weight: normal;
+  text-align: left;
+}
+th, td {
+  padding: 0.1em 1em;
+}
+a{
+	text-decoration: none;
+	color: blue;
+
+}
+a:hover{
+	color: #666;
+}

@@ -1,0 +1,60 @@
+<?php
+require_once("../controller/c_controller.php");
+$cli1 = "";
+if (isset($_POST['Atualizar'])) {
+    $cli1 = new c_controller();
+    //$obj->EditarDados($_GET['id']);
+    $cli1->EditarDados($_GET['id'],$_GET['nome'],$_GET['email'],$_GET['senha'],$_GET['logradouro'],$_GET['num'],$_GET['rua']);
+    echo "<script>alert(var_dump($cli1'))</script>;"
+}
+?>
+<DOCTYPE>
+<html>
+<head>
+    <script type="text/javascript">
+        function Mostrar(){        
+            // alert("Cliente atualizado com sucesso!"); 
+        window.location.href = "index.php"; 
+        }
+        
+    </script>
+
+</head>
+
+<body>
+<center>
+        <h1>Atualizar Dados do Cliente</h1>
+    
+        <form action="#" method="GET">
+            <table>
+                <tr>
+                    <td>Nome</td>
+                    <td><input type="text" name="nome"></td>
+                </tr>   
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="email"></td>
+                </tr>
+                <tr>    
+                    <td>Senha</td>
+                    <td><input type="password" name="senha"></td>
+                </tr>
+                <tr>    
+                    <td>Logradouro</td>
+                    <td><input type="text" name="logradouro"></td>
+                </tr>
+                <tr>    
+                    <td>Numero da casa</td>
+                    <td><input type="number" name="num"></td>
+                </tr>
+                <tr>    
+                    <td>Rua</td>
+                    <td><input type="text" name="rua"></td>
+                </tr>
+                <tr><td><input type="Submit" value="Atualizar" onclick="Mostrar()" name="Atualizar"></td></tr>
+            </table>
+        </form>
+    </center>
+</body>
+
+</html> 
